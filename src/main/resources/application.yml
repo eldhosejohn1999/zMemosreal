@@ -1,0 +1,28 @@
+logging:
+  level:
+    .: error
+    org.springframework: ERROR
+    com.mkyong: ERROR
+
+spring:
+  profiles:
+    active: "prod"
+  main:
+    banner-mode: "off"
+
+server:
+  email: eldhosejohn1999@gmail.com
+
+---
+
+spring:
+  profiles: dev
+server:
+  email: eldhosejohn1999@gmail.com
+  cluster:
+    - ip: 127.0.0.1
+      path: /dev1
+    - ip: 127.0.0.2
+      path: /dev2
+    - ip: 127.0.0.3
+      path: /dev3
